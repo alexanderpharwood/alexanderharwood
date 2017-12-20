@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en-gb">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, viewport-fit=cover" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/transition.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet">
+
+    <title>Alexander P. Harwood</title>
+
+</head>
+
+<body>
+
+
+    <!-- Slider container -->
+    <div class="swiper-container">
+        <!-- Slides wrapper -- -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide page-background page-about">
+                <div class="about-center-content">
+                    <h1 class="landing-header hidden">Alexander Harwood</h1>
+                    <p class="body-text landing-description"></p>
+                </div>
+            </div>
+            <div class="swiper-slide page-background page-author">
+                <div class="container">
+                    <div class- "row">
+                        <div class="col-md-6 col-sm-9 col-xs-12 col-centered">
+                            <h1 class="text-center margin-top-80 landing-header">Author</h1>
+                            <p class="body-text">My love, my life. I began to write for fun at a young age &#8212 perhaps seven or eight or thereabouts &#8212 after my father introduced me to the craft. But it was not until quite a few years later that I realised it was the thing I wanted to do for a living as well as a hobby.</p>
+                            <p class="body-text">I attempted to write my first novel at the age of sixteen. This was an remarkably naive undertaking, which amounted to little more than three thousand words, which was riddled with spelling mistakes, and which might be used as an example of wildly liberal and painfully incorrect use of the semicolon.</p>
+                            <p class="body-text">My second attempt, maybe two years later (we are getting somewhere now, reader), was seven times the length of my first, seven times better from a gramatical perspective, though still lacked, by a factor of perhaps seven hundred, the quality which it needed as an absolute minimum.</p>
+                            <p class="body-text">(Note that dreams of becoming a published teenager are by this point dwindling.)</p>
+                            <p class="body-text">I moved to the town of Cheltenham (where I still contentedly reside) in 2014 for work and a change. And it was here, under the flourescent lights of my very first kitchen that I finished my first fill-length manuscript. It was terrible. Three hundred pages of impressively clumsy and incompetent prose. But it was finished, and it was mine. I still have the first print of it, marked with the scraws of my poor father's initial notes (bless him for his perseverance), stuffed away in the gutters on an overburdened bookcase in my current apartment. </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-slide page-background page-designer">
+                <div class="container">
+                    <div class- "row">
+                        <div class="col-md-6 col-sm-9 col-xs-12 col-centered">
+                            <h1 class="text-center margin-top-80 landing-header">Developer, designer</h1>
+                            <p class="body-text">Hoby and professional trade.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-slide page-background page-outdoor">
+                <div class="container">
+                    <div class- "row">
+                        <div class="col-md-6 col-sm-9 col-xs-12 col-centered">
+                            <h1 class="text-center margin-top-80 landing-header">Traveller</h1>
+                            <p class="body-text">(Secretly aspirational nomad.)</p>
+                            <p class="body-text">Milan to Marseille cycling tour</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide page-background page-contact">
+                <div class="container">
+                    <div class- "row">
+                        <div class="col-md-6 col-sm-9 col-xs-12 col-centered">
+                            <h1 class="text-center margin-top-80 landing-header">Let's become acquainted</h1>
+                            <p class="body-text">Agents, publishers, press, clients, employers &#8212 please contact <a href="mailto:me@alexanderharwood.com">me@alexanderharwood.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Pagination, if required -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    </div>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/transition.min.js"></script>
+    <script src="js/typewriter.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            //swiper initialiser
+            var mySwiper = new Swiper('.swiper-container', {
+                // Optional parameters
+                direction: 'horizontal',
+                loop: false,
+                speed: 600,
+                // If we need pagination
+                pagination: '.swiper-pagination',
+                // Navigation arrows
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+                // And if we need scrollbar
+                //scrollbar: '.swiper-scrollbar',
+            });
+
+
+            $('.landing-header').transition({
+                animation: 'fade left in',
+                duration: 800,
+                onComplete: function() {
+                    $('.landing-description').css('width', $('.landing-header').width());
+                }
+            });
+
+
+            var description = new Typewriter($('.landing-description')[0], {
+                loop: false
+            });
+
+            description.pauseFor(1000)
+                .typeString('British novelist and short story writer. ')
+                .start()
+                .pauseFor(1000)
+                .typeString('Software developer and web designer — geek! ')
+                .start()
+                .pauseFor(1000)
+                .typeString('Habitual traveler and outdoor enthusiast. ')
+                .start()
+                .pauseFor(1000)
+                .typeString('Pleasure to meet you :) ')
+                .start();
+
+        });
+
+    </script>
+
+</body>
+
+</html>
