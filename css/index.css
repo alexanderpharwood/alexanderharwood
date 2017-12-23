@@ -68,22 +68,22 @@
     }
     
     .page-author {
-        background: #F2994A;
-        /* fallback for old browsers */
-        background: -webkit-linear-gradient(-45deg, #F2C94C, #F2994A);
-        /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(-45deg, #F2C94C, #F2994A);
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: #F9F9F9;
+        
     }
     
-    .page-designer {
-        background: #e53935;
-        /* fallback for old browsers */
-        background: -webkit-linear-gradient(-45deg, #e35d5b, #e53935);
-        /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(-45deg, #e35d5b, #e53935);
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    .page-author .body-text, .page-author h1{
+        color:black;
     }
+    
+    .page-stories {
+        background: white;
+    }
+    
+        .page-stories .body-text, .page-stories h1{
+        color:black;
+    }
+    
     
     .page-outdoor {
         background: #2C3E50;
